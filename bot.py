@@ -12,10 +12,12 @@ def start(message):
     btn1 = types.InlineKeyboardButton("❤️ почему я тебя люблю", callback_data="love")
     btn2 = types.InlineKeyboardButton("📸 наши моменты", callback_data="moments")
     btn3 = types.InlineKeyboardButton("💌 сообщение от Ани", callback_data="message")
+    btn4 = types.InlineKeyboardButton("🌙 если тебе грустно", callback_data="sad")
 
     keyboard.add(btn1)
     keyboard.add(btn2)
     keyboard.add(btn3)
+    keyboard.add(btn4)
 
     bot.send_message(
         message.chat.id,
