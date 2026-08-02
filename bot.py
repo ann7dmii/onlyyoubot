@@ -107,7 +107,7 @@ def callback(call):
     elif call.data == "sad2":
         bot.send_photo(
             call.message.chat.id,
-            photo="AgACAgIAAxkBAAMLam_ChgbUfRuUF7Zy5YvgINHgELAAAl4XaxsfF4FLU75Yz8eRCp0BAAMCAAN5AAM9BA",
+            photo="AgACAgIAAxkBAAOzam_HeW-ErqDw_Dsrb9dFHS7Kiu8AAl4XaxsfF4FL7p8YaqKlHigBAAMCAAN5AAM9BA",
             caption=
             "🌧️ если тебе грустно...\n\n"
             "🤍 пожалуйста, не забывай, что плохие моменты проходят.\n\n"
