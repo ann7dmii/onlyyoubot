@@ -37,36 +37,35 @@ def menu(message):
         )
 
     elif message.text == "📸 наши моменты":
-
-    keyboard = types.InlineKeyboardMarkup()
-
-    btn1 = types.InlineKeyboardButton(
+        keyboard = types.InlineKeyboardMarkup()
+        
+        btn1 = types.InlineKeyboardButton(
         "🤍 первый момент",
         callback_data="first_moment"
-    )
-
-    btn2 = types.InlineKeyboardButton(
+        )
+        
+        btn2 = types.InlineKeyboardButton(
         "🥹 самые счастливые дни",
         callback_data="happy_days"
-    )
-
-    btn3 = types.InlineKeyboardButton(
+        )
+        
+        btn3 = types.InlineKeyboardButton(
         "🫂 наши обнимашки",
         callback_data="hugs"
-    )
-
-    keyboard.add(btn1)
-    keyboard.add(btn2)
-    keyboard.add(btn3)
-
-    bot.send_message(
-        message.chat.id,
-        "📸 наш маленький альбом ❤️\n\n"
-        "здесь будут храниться наши самые тёплые моменты 🥹\n\n"
-        "каждая фотография — это маленькое воспоминание о нас 🤍\n\n"
-        "выбери, что хочешь открыть 🫶",
-        reply_markup=keyboard
-    )
+        )
+        
+        keyboard.add(btn1)
+        keyboard.add(btn2)
+        keyboard.add(btn3)
+        
+        bot.send_message(
+            message.chat.id,
+            "📸 наш маленький альбом ❤️\n\n"
+            "здесь будут храниться наши самые тёплые моменты 🥹\n\n"
+            "каждая фотография — это маленькое воспоминание о нас 🤍\n\n"
+            "выбери, что хочешь открыть 🫶",
+            reply_markup=keyboard
+        )
     
     elif message.text == "💌 сообщение от Ани":
         bot.send_message(
