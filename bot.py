@@ -84,7 +84,7 @@ def callback(call):
     if call.data == "miss":
         bot.send_photo(
             call.message.chat.id,
-            photo="ТУТ_ID_ФОТО",
+            photo="AgACAgIAAxkBAANham-xaGp3fBbmcP4nypd038wm4MIAArkhaxvHQIBLK0TLc4aDnQ4BAAMCAAN5AAM9BA",
             caption=
             "🥺 если ты сейчас скучаешь по мне...\n\n"
             "🤍 представь, что я рядом.\n\n"
@@ -95,7 +95,7 @@ def callback(call):
     elif call.data == "sleep":
         bot.send_photo(
             call.message.chat.id,
-            photo="ТУТ_ID_ФОТО",
+            photo="AgACAgIAAxkBAANqam-0wU3sUmSkA2ItpViJ39V0ftUAArwhaxvHQIBLy8EAAfBMkZT5AQADAgADeQADPQQ",
             caption=
             "😴 если ты не можешь уснуть...\n\n"
             "🤍 закрой глаза и представь, что я рядом.\n\n"
@@ -105,7 +105,7 @@ def callback(call):
     elif call.data == "support":
         bot.send_photo(
             call.message.chat.id,
-            photo="ТУТ_ID_ФОТО",
+            photo="AgACAgIAAxkBAAO6am_H5R3s9SGbeDE8XAJpaW9cPtIAAi4Zaxtu_YBLU_NnL6Lbb2EBAAMCAAN5AAM9BA",
             caption=
             "💪 если тебе нужна поддержка...\n\n"
             "🤍 помни, что я верю в тебя.\n\n"
@@ -115,7 +115,7 @@ def callback(call):
     elif call.data == "sad2":
         bot.send_photo(
             call.message.chat.id,
-            photo="ТУТ_ID_ФОТО",
+            photo="AgACAgIAAxkBAAOzam_HeW-ErqDw_Dsrb9dFHS7Kiu8AAl4XaxsfF4FL7p8YaqKlHigBAAMCAAN5AAM9BA",
             caption=
             "🌧️ если тебе грустно...\n\n"
             "🤍 плохие моменты проходят.\n\n"
