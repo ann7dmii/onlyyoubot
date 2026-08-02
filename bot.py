@@ -81,7 +81,7 @@ def callback(call):
         )
         @bot.message_handler(content_types=['photo'])
         def photo_id(message):
-    bot.send_message(message.chat.id, message.photo[-1].file_id)
+            bot.send_message(message.chat.id, message.photo[-1].file_id)
 
 
 bot.infinity_polling()
