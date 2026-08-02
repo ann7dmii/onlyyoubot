@@ -67,6 +67,7 @@ def callback(call):
             "💌 выбери момент, в который хочешь открыть письмо 🤍",
             reply_markup=keyboard
         ) 
+        
     elif call.data == "miss":
         bot.send_message(
             call.message.chat.id,
