@@ -93,7 +93,7 @@ def callback(call):
         )
     
     elif call.data == "support":
-    bot.send_photo(
+        bot.send_photo(
         call.message.chat.id,
         photo="AgACAgIAAxkBAAMHam-6kFXjIc0AAVNGQGVBMzp_gdYBAAKdHmsbjniASz6qE5O8KOTxAQADAgADeQADPQQ",
         caption=
