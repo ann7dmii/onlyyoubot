@@ -95,7 +95,7 @@ def callback(call):
     elif call.data == "support":
         bot.send_photo(
             call.message.chat.id,
-            photo="AgACAgIAAxkBAAMHam-6kFXjIc0AAVNGQGVBMzp_gdYBAAKdHmsbjniASz6qE5O8KOTxAQADAgADeQADPQQ",
+            photo="AgACAgIAAxkBAAO6am_H5R3s9SGbeDE8XAJpaW9cPtIAAi4Zaxtu_YBLU_NnL6Lbb2EBAAMCAAN5AAM9BA",
             caption=
             "💪 если тебе нужна поддержка...\n\n"
             "🤍 помни, что ты не один.\n\n"
