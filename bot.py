@@ -78,6 +78,51 @@ def menu(message):
             reply_markup=keyboard
         )
         
+@bot.callback_query_handler(func=lambda call: True)
+def callback(call):
+
+    if call.data == "miss":
+        bot.send_photo(
+            call.message.chat.id,
+            photo="ТУТ_ID_ФОТО",
+            caption=
+            "🥺 если ты сейчас скучаешь по мне...\n\n"
+            "🤍 представь, что я рядом.\n\n"
+            "🫂 я бы крепко тебя обняла и никуда не отпускала.\n\n"
+            "💘 я тоже очень скучаю по тебе."
+        )
+
+    elif call.data == "sleep":
+        bot.send_photo(
+            call.message.chat.id,
+            photo="ТУТ_ID_ФОТО",
+            caption=
+            "😴 если ты не можешь уснуть...\n\n"
+            "🤍 закрой глаза и представь, что я рядом.\n\n"
+            "🫂 желаю тебе самых спокойных снов."
+        )
+
+    elif call.data == "support":
+        bot.send_photo(
+            call.message.chat.id,
+            photo="ТУТ_ID_ФОТО",
+            caption=
+            "💪 если тебе нужна поддержка...\n\n"
+            "🤍 помни, что я верю в тебя.\n\n"
+            "❤️ у тебя всё получится."
+        )
+
+    elif call.data == "sad2":
+        bot.send_photo(
+            call.message.chat.id,
+            photo="ТУТ_ID_ФОТО",
+            caption=
+            "🌧️ если тебе грустно...\n\n"
+            "🤍 плохие моменты проходят.\n\n"
+            "🫂 я рядом и всегда поддержу тебя."
+        )
+
+
 @bot.message_handler(content_types=['photo'])
 def get_photo_id(message):
     bot.send_message(
