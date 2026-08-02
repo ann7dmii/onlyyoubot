@@ -103,6 +103,7 @@ def callback(call):
             "❤️ я горжусь тобой и всегда буду на твоей стороне.\n\n"
             "💘 у тебя всё получится, мой самый любимый человек."
         )
+        
     elif call.data == "sad2":
         bot.send_photo(
             call.message.chat.id,
