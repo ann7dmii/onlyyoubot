@@ -91,12 +91,19 @@ def callback(call):
             "😽 пусть тебе приснюсь я, а утром ты проснёшься с улыбкой.\n\n"
             "💘 я люблю тебя и всегда рядом мыслями."
         )
-    
+        
     elif call.data == "support":
-        bot.send_message(
+        bot.send_photo(
             call.message.chat.id,
-            "тест поддержки работает ❤️"
+            photo="AgACAgIAAxkBAAMFam-43giptB1PwkaLydPB8yBsEMgAArwhaxvHQIBL9vNgImz5BfMBAAMCAAN5AAM9BA",
+            caption=
+            "💪 если тебе нужна поддержка...\n\n"
+            "🤍 помни, что ты не один.\n\n"
+            "🫂 даже если сейчас тяжело — я верю в тебя и знаю, что ты справишься.\n\n"
+            "❤️ я горжусь тобой и всегда буду на твоей стороне.\n\n"
+            "💘 у тебя всё получится, мой самый любимый человек."
         )
+    
     
     
         
