@@ -116,6 +116,13 @@ def callback(call):
             "💘 даже когда тебе тяжело, я всё равно рядом и верю в тебя."
         )
         
+@bot.message_handler(content_types=['photo'])
+def get_photo_id(message):
+    bot.send_message(
+        message.chat.id,
+        message.photo[-1].file_id
+    )
+        
     
     
     
