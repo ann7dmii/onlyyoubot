@@ -27,29 +27,36 @@ def start(message):
         reply_markup=keyboard
     )
 
-@bot.callback_query_handler(func=lambda call: True)
-def callback(call):
-    if call.data == "love":
-        bot.send_message(call.message.chat.id, "я люблю тебя за то, какой ты есть ❤️")
+@bot.message_handler(func=lambda message: True)
+def menu(message):
 
-    elif call.data == "moments":
-        bot.send_message(call.message.chat.id, "тут скоро будут наши самые тёплые моменты 📸")
-
-    elif call.data == "message":
-        bot.send_message(call.message.chat.id, "ты очень важный человек для меня ❤️")
-    elif call.data == "sad":
+    if message.text == "❤️ почему я тебя люблю":
         bot.send_message(
-            call.message.chat.id,
-            "🌙 если однажды тебе станет грустно...\n\n"
-            "🤍 просто открой этого бота.\n\n"
-            "💗 я надеюсь, что хотя бы одно сообщение отсюда сможет вызвать у тебя улыбку.\n\n"
-            "🫂 даже если меня нет рядом, мысленно я всегда тебя обнимаю.\n\n"
-            "😽 ты самый дорогой человек в моей жизни.\n\n"
-            "💘 я очень сильно тебя люблю.\n\n"
-            "✨ и никогда не забывай, какой ты замечательный."
+            message.chat.id,
+            "я люблю тебя за то, какой ты есть ❤️"
         )
 
-    elif call.data == "open_when":
+    elif message.text == "📸 наши моменты":
+        bot.send_message(
+            message.chat.id,
+            "тут скоро будут наши самые тёплые моменты 📸"
+        )
+
+    elif message.text == "💌 сообщение от Ани":
+        bot.send_message(
+            message.chat.id,
+            "ты очень важный человек для меня ❤️"
+        )
+
+    elif message.text == "🌙 если тебе грустно":
+        bot.send_message(
+            message.chat.id,
+            "🌙 если тебе станет грустно...\n\n"
+            "🤍 помни, что я рядом мыслями.\n\n"
+            "🫂 я всегда верю в тебя ❤️"
+        )
+
+    elif message.text == "💌 открыть, когда...":
         keyboard = types.InlineKeyboardMarkup()
 
         btn1 = types.InlineKeyboardButton("🌧️ когда тебе грустно", callback_data="sad2")
@@ -57,63 +64,13 @@ def callback(call):
         btn3 = types.InlineKeyboardButton("😴 когда не можешь уснуть", callback_data="sleep")
         btn4 = types.InlineKeyboardButton("💪 когда нужна поддержка", callback_data="support")
 
-        keyboard.add(btn1)
-        keyboard.add(btn2)
-        keyboard.add(btn3)
-        keyboard.add(btn4)
+        keyboard.add(btn1, btn2)
+        keyboard.add(btn3, btn4)
 
         bot.send_message(
-            call.message.chat.id,
+            message.chat.id,
             "💌 выбери момент, в который хочешь открыть письмо 🤍",
             reply_markup=keyboard
-        ) 
-        
-    elif call.data == "miss":
-        bot.send_photo(
-            call.message.chat.id,
-            photo= "AgACAgIAAxkBAANham-xaGp3fBbmcP4nypd038wm4MIAArkhaxvHQIBLK0TLc4aDnQ4BAAMCAAN5AAM9BA",
-            caption=
-            "🥺 если ты сейчас скучаешь по мне...\n\n"
-            "🤍 представь, что я рядом.\n\n"
-            "🫂 я бы крепко-крепко тебя обняла, уткнулась носиком в твоё плечо и никуда не отпускала.\n\n"
-            "😽 совсем скоро мы снова увидимся.\n\n"
-            "💘 а пока знай — я тоже очень скучаю по тебе."
-        )    
-        
-    elif call.data == "sleep":
-        bot.send_photo(
-            call.message.chat.id,
-            photo="AgACAgIAAxkBAAMFam-43giptB1PwkaLydPB8yBsEMgAArwhaxvHQIBL9vNgImz5BfMBAAMCAAN5AAM9BA",
-            caption=
-            "🌙 если ты не можешь уснуть...\n\n"
-            "🤍 закрой глаза и представь, что я рядом.\n\n"
-            "🫂 я обнимаю тебя, глажу по голове и желаю тебе самых спокойных снов.\n\n"
-            "😽 пусть тебе приснюсь я, а утром ты проснёшься с улыбкой.\n\n"
-            "💘 я люблю тебя и всегда рядом мыслями."
-        )
-        
-    elif call.data == "support":
-        bot.send_photo(
-            call.message.chat.id,
-            photo="AgACAgIAAxkBAAO6am_H5R3s9SGbeDE8XAJpaW9cPtIAAi4Zaxtu_YBLU_NnL6Lbb2EBAAMCAAN5AAM9BA",
-            caption=
-            "💪 если тебе нужна поддержка...\n\n"
-            "🤍 помни, что ты не один.\n\n"
-            "🫂 даже если сейчас тяжело — я верю в тебя и знаю, что ты справишься.\n\n"
-            "❤️ я горжусь тобой и всегда буду на твоей стороне.\n\n"
-            "💘 у тебя всё получится, мой самый любимый человек."
-        )
-        
-    elif call.data == "sad2":
-        bot.send_photo(
-            call.message.chat.id,
-            photo="AgACAgIAAxkBAAOzam_HeW-ErqDw_Dsrb9dFHS7Kiu8AAl4XaxsfF4FL7p8YaqKlHigBAAMCAAN5AAM9BA",
-            caption=
-            "🌧️ если тебе грустно...\n\n"
-            "🤍 пожалуйста, не забывай, что плохие моменты проходят.\n\n"
-            "🫂 я бы сейчас обняла тебя и просто посидела рядом.\n\n"
-            "❤️ ты очень сильный и замечательный человек.\n\n"
-            "💘 даже когда тебе тяжело, я всё равно рядом и верю в тебя."
         )
         
 @bot.message_handler(content_types=['photo'])
