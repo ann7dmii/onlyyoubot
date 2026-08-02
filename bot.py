@@ -83,7 +83,7 @@ def callback(call):
     elif call.data == "sleep":
         bot.send_photo(
             call.message.chat.id,
-            photo="8980043267:AAFfCru4yVmGlYe9Z5SC9rjfKJcVZRZHKN8",
+            photo="AgACAgIAAxkBAAMFam-43giptB1PwkaLydPB8yBsEMgAArwhaxvHQIBL9vNgImz5BfMBAAMCAAN5AAM9BA",
             caption=
             "🌙 если ты не можешь уснуть...\n\n"
             "🤍 закрой глаза и представь, что я рядом.\n\n"
