@@ -8,18 +8,18 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
 def start(message):
     keyboard = types.ReplyKeyboardMarkup(
-    resize_keyboard=True
-)
-
-btn1 = types.KeyboardButton("❤️ почему я тебя люблю")
-btn2 = types.KeyboardButton("📸 наши моменты")
-btn3 = types.KeyboardButton("💌 сообщение от Ани")
-btn4 = types.KeyboardButton("🌙 если тебе грустно")
-btn5 = types.KeyboardButton("💌 открыть, когда...")
-
-keyboard.add(btn1, btn2)
-keyboard.add(btn3, btn4)
-keyboard.add(btn5)
+        resize_keyboard=True
+    )
+    
+    btn1 = types.KeyboardButton("❤️ почему я тебя люблю")
+    btn2 = types.KeyboardButton("📸 наши моменты")
+    btn3 = types.KeyboardButton("💌 сообщение от Ани")
+    btn4 = types.KeyboardButton("🌙 если тебе грустно")
+    btn5 = types.KeyboardButton("💌 открыть, когда...")
+    
+    keyboard.add(btn1, btn2)
+    keyboard.add(btn3, btn4)
+    keyboard.add(btn5)
 
     bot.send_message(
         message.chat.id,
