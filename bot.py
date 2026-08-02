@@ -37,7 +37,8 @@ def callback(call):
 
     elif call.data == "message":
         bot.send_message(call.message.chat.id, "ты очень важный человек для меня ❤️")
-        elif call.data == "sad":
+       
+    elif call.data == "sad":
     bot.send_message(
         call.message.chat.id,
         "🌙 если однажды тебе станет грустно...\n\n"
