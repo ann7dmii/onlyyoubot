@@ -69,17 +69,17 @@ def callback(call):
         ) 
         
     elif call.data == "miss":
-        bot.send_message(
+        bot.send_photo(
             call.message.chat.id,
+            photo= "AgACAgIAAxkBAANham-xaGp3fBbmcP4nypd038wm4MIAArkhaxvHQIBLK0TLc4aDnQ4BAAMCAAN5AAM9BA",
+            caption=
             "🥺 если ты сейчас скучаешь по мне...\n\n"
             "🤍 представь, что я рядом.\n\n"
             "🫂 я бы крепко-крепко тебя обняла, уткнулась носиком в твоё плечо и никуда не отпускала.\n\n"
             "😽 совсем скоро мы снова увидимся.\n\n"
             "💘 а пока знай — я тоже очень скучаю по тебе."
         )
-@bot.message_handler(content_types=['photo'])
-def photo_id(message):
-    bot.send_message(message.chat.id, message.photo[-1].file_id)
+
     
 bot.infinity_polling()
        
