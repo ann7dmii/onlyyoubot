@@ -1,4 +1,4 @@
-import telebot
+щimport telebot
 from telebot import types
 
 TOKEN = "8849172686:AAEMt0SoscNpCVNF4KkNvu90Q7OkdjFeWG8"
@@ -7,19 +7,19 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    keyboard = types.InlineKeyboardMarkup()
+    keyboard = types.ReplyKeyboardMarkup(
+    resize_keyboard=True
+)
 
-    btn1 = types.InlineKeyboardButton("❤️ почему я тебя люблю", callback_data="love")
-    btn2 = types.InlineKeyboardButton("📸 наши моменты", callback_data="moments")
-    btn3 = types.InlineKeyboardButton("💌 сообщение от Ани", callback_data="message")
-    btn4 = types.InlineKeyboardButton("🌙 если тебе грустно", callback_data="sad")
-    btn5 = types.InlineKeyboardButton("💌 открыть, когда...", callback_data="open_when")
+btn1 = types.KeyboardButton("❤️ почему я тебя люблю")
+btn2 = types.KeyboardButton("📸 наши моменты")
+btn3 = types.KeyboardButton("💌 сообщение от Ани")
+btn4 = types.KeyboardButton("🌙 если тебе грустно")
+btn5 = types.KeyboardButton("💌 открыть, когда...")
 
-    keyboard.add(btn1)
-    keyboard.add(btn2)
-    keyboard.add(btn3)
-    keyboard.add(btn4)
-    keyboard.add(btn5)
+keyboard.add(btn1, btn2)
+keyboard.add(btn3, btn4)
+keyboard.add(btn5)
 
     bot.send_message(
         message.chat.id,
