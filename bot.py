@@ -39,7 +39,7 @@ def callback(call):
         bot.send_message(call.message.chat.id, "ты очень важный человек для меня ❤️")
        
     elif call.data == "sad":
-    bot.send_message(
+        bot.send_message(
         call.message.chat.id,
         "🌙 если однажды тебе станет грустно...\n\n"
         "🤍 просто открой этого бота.\n\n"
@@ -49,8 +49,7 @@ def callback(call):
         "💘 я очень сильно тебя люблю.\n\n"
         "✨ и никогда не забывай, какой ты замечательный."
     )
-
-elif call.data == "open_when":
+        elif call.data == "open_when":
     keyboard = types.InlineKeyboardMarkup()
 
     btn1 = types.InlineKeyboardButton("🌧️ когда тебе грустно", callback_data="sad2")
