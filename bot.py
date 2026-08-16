@@ -21,7 +21,7 @@ def start(message):
     keyboard.add(btn1, btn2)
     keyboard.add(btn3, btn4)
     keyboard.add(btn5)
-    keyboard.add(bth6)
+    keyboard.add(btn6)
 
     bot.send_message(
         message.chat.id,
