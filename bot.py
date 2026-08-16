@@ -118,6 +118,20 @@ def callback(call):
             "какая я была смущённая, но именно с этого маленького момента "
             "началось столько всего нашего 🫂❤️"
         )
+    
+    elif call.data == "happy_days":
+        bot.send_photo(
+            call.message.chat.id,
+            photo="AgACAgIAAxkBAAIBWGqBttVKCdjLDsRnHByMK6A_lwqZAAJkGmsbMREISClb5qP3gUyAAQADAgADeQADPQQ",
+            caption=
+            "🥹 наши самые счастливые дни...\n\n"
+            "иногда я пересматриваю наши фотографии "
+            "и понимаю, как же много у нас уже всего было ❤️\n\n"
+            "столько смеха, прогулок, объятий и маленьких моментов, "
+            "которые хочется сохранить навсегда 🫂\n\n"
+            "🤍 надеюсь, что впереди у нас будет ещё очень много "
+            "таких счастливых дней."
+        )
 
     elif call.data == "miss":
         bot.send_photo(
