@@ -106,6 +106,28 @@ def menu(message):
             "«очень. безумно. бесконечно.» 🫂❤️"
         )
     
+    elif message.text == "🔐 только для тебя":
+        keyboard = types.InlineKeyboardMarkup()
+
+        btn1 = types.InlineKeyboardButton(
+            "❤️ открыть",
+            callback_data="secret_open"
+        )
+
+        btn2 = types.InlineKeyboardButton(
+            "🙈 передумал",
+            callback_data="secret_no"
+        )
+
+        keyboard.add(btn1, btn2)
+
+        bot.send_message(
+            message.chat.id,
+            "🔐 здесь спрятано кое-что только для тебя...\n\n"
+            "ты точно хочешь открыть? 👀❤️",
+            reply_markup=keyboard
+        )
+    
     elif message.text == "💌 сообщение от Ани":
         bot.send_message(
             message.chat.id,
