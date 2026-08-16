@@ -18,12 +18,13 @@ def start(message):
     btn4 = types.KeyboardButton("🌙 если тебе грустно")
     btn5 = types.KeyboardButton("💌 открыть, когда...")
     btn7 = types.KeyboardButton("🔐 только для тебя")
+    btn8 = types.KeyboardButton("🎲 случайное воспоминание")
     
     keyboard.add(btn1, btn2)
     keyboard.add(btn3, btn4)
     keyboard.add(btn5)
     keyboard.add(btn6)
-    keyboard.add(btn7)
+    keyboard.add(btn7, btn8)
 
     bot.send_message(
         message.chat.id,
