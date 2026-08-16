@@ -132,6 +132,18 @@ def callback(call):
             "🤍 надеюсь, что впереди у нас будет ещё очень много "
             "таких счастливых дней."
         )
+    
+    elif call.data == "hugs":
+        bot.send_photo(
+            call.message.chat.id,
+            photo="AgACAgIAAxkBAAIBXWqBt4nU1xldu10bCnB41BskIvT1AAJoGmsbMREISL94UBZwDRobAQADAgADeQADPQQ",
+            caption=
+            "🫂 наши обнимашки...\n\n"
+            "есть моменты, которые даже не хочется описывать словами 🤍\n\n"
+            "мне просто нравится обнимать тебя "
+            "и чувствовать, что в этот момент ты рядом ❤️\n\n"
+            "🥹 пусть таких обнимашек у нас будет ещё бесконечно много."
+        )
 
     elif call.data == "miss":
         bot.send_photo(
