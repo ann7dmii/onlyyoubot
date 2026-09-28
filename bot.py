@@ -203,7 +203,7 @@ def menu(message):
         
 @bot.callback_query_handler(func=lambda call: True)
 def callback(call):
-        bot.answer_callback_query(call.id)
+       bot.answer_callback_query(call.id)
     
     if call.data == "first_moment":
         bot.send_photo(
