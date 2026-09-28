@@ -1,4 +1,4 @@
-import telebot
+лишьimport telebot
 from telebot import types
 import random
 
@@ -217,6 +217,7 @@ def callback(call):
                 "какая я была смущённая, но именно тогда\n"
                 "началось столько всего нашего"
             )
+        )
             
     elif call.data == "happy_days":
         bot.send_photo(
