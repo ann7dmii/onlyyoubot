@@ -203,22 +203,21 @@ def menu(message):
         
 @bot.callback_query_handler(func=lambda call: True)
 def callback(call):
-       bot.answer_callback_query(call.id)
-    
+    bot.answer_callback_query(call.id)
+
     if call.data == "first_moment":
         bot.send_photo(
             call.message.chat.id,
             photo="AgACAgIAAxkBAAIBR2qBsrX-xMcXg_3DhjOu5phPSq8ZAAJSGmsbMREISOfeoP95QpZ9AQADAgADeQADPQQ",
-            caption=
-            "🤍 наш самый первый совместный момент...\n\n"
-            "это наша первая фотография вместе 🥹\n\n"
-            "тогда мы впервые пошли гулять вдвоём, "
-            "а я ужасно стеснялась тебя 😭🤍\n\n"
-            "сейчас даже немного смешно вспоминать, "
-            "какая я была смущённая, но именно с этого маленького момента "
-            "началось столько всего нашего 🫂❤️"
-        )
-    
+            caption=(
+                "это наша первая фотография вместе\n"
+                "тогда мы впервые пошли гулять\n"
+                "а я ужасно стеснялась тебя\n"
+                "сейчас даже немного смешно вспоминать\n"
+                "какая я была смущённая, но именно тогда\n"
+                "началось столько всего нашего"
+            )
+            
     elif call.data == "happy_days":
         bot.send_photo(
             call.message.chat.id,
